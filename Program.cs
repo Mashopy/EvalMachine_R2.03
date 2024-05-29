@@ -4,7 +4,11 @@ int taille = Convert.ToInt32(Console.ReadLine());
 int[] T = TableauEntier(taille);
 int premier = SaisieEntierPremier();
 int second = SaisieEntierSecond();
+Console.WriteLine("Tableau initial:");
+AfficherTableau(T);
 int[] T2 = TableauResultat(T, premier, second);
+Console.WriteLine("Tableau résultat:");
+AfficherTableau(T2);
 
 static int[] TableauEntier(int taille)
 {
@@ -46,4 +50,12 @@ static int[] TableauResultat(int[] tab, int premier, int second)
     }
 
     return T2;
+}
+
+static void AfficherTableau(int[] tab)
+{
+    foreach (int i in tab)
+    {
+        Console.WriteLine(i);
+    }
 }
